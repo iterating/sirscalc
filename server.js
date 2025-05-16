@@ -8,7 +8,7 @@ const SupabaseSIRS = require('./src/infrastructure/database/vercel/SupabaseSIRS'
 const SIRSService = require('./src/application/services/SIRSService');
 const SIRSController = require('./src/presentation/controllers/SIRSController');
 const createSIRSRouter = require('./src/presentation/routes/sirsRoutes');
-const { exportToHL7, exportToFHIR } = require('./src/utils/dataExport');
+const exportToFHIR = require('./src/utils/dataExport');
 
 // Initialize application
 const app = express();

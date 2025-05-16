@@ -45,7 +45,6 @@ export class ResultDisplay {
             </div>
             <div class="export-buttons">
                 <button class="export-btn fhir-btn">Export FHIR</button>
-                <button class="export-btn hl7-btn">Export HL7</button>
             </div>
         `;
 
@@ -55,9 +54,6 @@ export class ResultDisplay {
             exportUtils.downloadFile(fhirData, 'sirs-assessment-fhir.json', 'application/json');
         });
 
-        this.container.querySelector('.hl7-btn').addEventListener('click', () => {
-            const hl7Data = exportUtils.toHL7(data);
-            exportUtils.downloadFile(hl7Data, 'sirs-assessment-hl7.txt', 'text/plain');
-        });
+
     }
 }

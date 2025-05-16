@@ -33,9 +33,8 @@ Early detection of SIRS is crucial because:
 - **User-friendly Interface**: Clean, intuitive design for rapid data entry
 - **Mobile Responsive**: Use on any device at the bedside
 - **Data Persistence**: Secure storage of calculations using Supabase
-- **Health Data Interoperability**: Export results in FHIR and HL7 formats
+- **Health Data Interoperability**: Export results in FHIR format
   - FHIR: Export as FHIR Observation resources (JSON)
-  - HL7: Export as HL7 v2.5.1 messages (Text)
 
 <a href="https://sirscalc.vercel.app/"><img src="https://raw.githubusercontent.com/iterating/sirscalc/refs/heads/main/public/portfolio.sirscalc.calc.jpg" width="350px"><img src="https://raw.githubusercontent.com/iterating/sirscalc/refs/heads/main/public/portfolio.sirscalc.hl7-fhir-export.jpg" width="350px"></a>
 
@@ -47,7 +46,7 @@ Early detection of SIRS is crucial because:
 - **Database**: Supabase (PostgreSQL)
 - **Architecture**: Clean Architecture with Domain-Driven Design
 - **Deployment**: Vercel for serverless deployment
-- **Healthcare Standards**: FHIR R4, HL7 v2.5.1
+- **Healthcare Standards**: FHIR R4
 
 ## Healthcare Interoperability
 
