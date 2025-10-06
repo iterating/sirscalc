@@ -4,7 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 // Import dependencies
-import SupabaseSIRS from './src/infrastructure/database/SupabaseSIRS.js';
+import NeonSIRS from './src/infrastructure/database/NeonSIRS.js';
 import SIRSService from './src/services/SIRSService.js';
 import SIRSController from './src/presentation/controllers/SIRSController.js';
 import createSIRSRouter from './src/presentation/routes/sirsRoutes.js';
@@ -31,7 +31,7 @@ let sirsRouter;
 async function initialize() {
     try {
         // Initialize repository
-        sirsRepository = new SupabaseSIRS();
+        sirsRepository = new NeonSIRS();
         await sirsRepository.initialize();
         console.log('Repository initialized successfully');
 

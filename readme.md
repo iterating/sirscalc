@@ -32,7 +32,7 @@ Early detection of SIRS is crucial because:
 - **Calculation History**: Track and review previous calculations
 - **User-friendly Interface**: Clean, intuitive design for rapid data entry
 - **Mobile Responsive**: Use on any device at the bedside
-- **Data Persistence**: Secure storage of calculations using Supabase
+- **Data Persistence**: Secure storage of calculations using Neon Postgres
 - **Health Data Interoperability**: Export results in FHIR format
   - FHIR: Export as FHIR Observation resources (JSON)
 
@@ -43,7 +43,7 @@ Early detection of SIRS is crucial because:
 
 - **Frontend**: Javascript, HTML, CSS
 - **Backend**: Node.js with Express
-- **Database**: Supabase (PostgreSQL)
+- **Database**: Neon Postgres (PostgreSQL)
 - **Architecture**: Clean Architecture with Domain-Driven Design
 - **Deployment**: Vercel for serverless deployment
 - **Healthcare Standards**: FHIR R4
@@ -63,6 +63,32 @@ The SIRS Calculator supports exporting assessment results in two widely-used hea
 - Traditional text-based format widely used in healthcare
 - Includes MSH, PID, OBR, and OBX segments
 - Compatible with legacy healthcare systems
+
+## Database Migration Guide
+
+### From Supabase to Neon Postgres
+
+The application has been migrated from Supabase to Neon Postgres for improved performance and scalability. 
+
+#### Environment Variables
+
+Update your `.env` file with the new Neon database URL:
+
+```bash
+# replace with your actual Neon database URL
+NEON_DATABASE_URL=postgresql://username:password@host.neon.tech/database_name?sslmode=require
+```
+
+#### Database Schema
+
+The migration maintains the same PostgreSQL schema, ensuring data compatibility:
+
+- **Table**: `sirs_calculations`
+- **Columns**: id, temperature, heart_rate, respiratory_rate, wbc, sirs_met, criteria_count, criteria_details, created_at
+
+#### Connection Pooling
+
+Neon provides automatic connection pooling and SSL encryption for enhanced security.
 
 ## Contributing
 

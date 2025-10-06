@@ -9,6 +9,7 @@
     "dev": "nodemon server/index.js"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
     "@supabase/supabase-js": "^2.74.0",
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
